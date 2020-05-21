@@ -2,6 +2,11 @@
 	font-family:"Intro Regular";
 	src: url("../fonts/Intro-Regular.woff")  
 }
+
+@font-face {
+	font-family:"mfn-icons";
+	src: url("../fonts/mfn-icons.woff")  
+}
 /* Reset styles */
 * {
 	padding: 0px;
@@ -191,9 +196,85 @@ a.button {
 	padding: 15px 30px;	
 }
 
-.menu {
+.navMenu {
+	min-height: 54px;
+	height: 1px;
 	background-color: #737d26;
 }	
+
+.navMenuWrapper {
+	height: 100%;
+	margin: 0px auto;
+}
+
+.ListWrapper {
+	display: flex;
+	position: relative;
+	width: fit-content;
+	height: inherit;
+	justify-content: space-between;	
+	align-items: center;
+	margin: 0px auto;
+}
+
+.navMenu span{
+	font-size: 18px;
+	color: #fafafa;
+}
+
+.navMenuWrapper ul li {
+	padding: 0px 19px;
+}
+
+.navMenuWrapper .navMenuList:after {
+    font-family: 'mfn-icons';
+    content: '\e869';	
+	padding: 0px 0px 0px 7px;
+}
+
+.outList {
+	background-color: #fff;
+	position: absolute;
+	top: 100%;
+	z-index: 3;
+}
+
+ul.outList li {
+	padding: 10px 20px;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+ul.outList li:hover {
+	background-color: rgba(0,0,0,.05);
+	cursor: pointer;	
+}
+
+
+.slider {
+	height: 501px;
+	background: rgba(0, 0, 0, 0.5) url("../img/background/slideBack.png");
+	position: relative;
+}
+
+.sliderContentWrapper {
+	position: absolute;
+    top: 50%;
+	width: -webkit-fill-available;
+}
+
+.sliderContent {
+	margin: 0 auto;
+	width: fit-content;
+}
+
+.sliderContentTextInfo {
+	width: 70%;
+	color: #fff;
+	font-size: 55px;
+	font-weight: 700;
+}
+
+
 
 
 @media (max-width: 375px) { 
