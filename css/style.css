@@ -7,6 +7,66 @@
 	font-family:"mfn-icons";
 	src: url("../fonts/mfn-icons.woff")  
 }
+
+.slide-left {
+	animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+@keyframes slide-left {
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.focus-in-expand {
+	animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+@keyframes focus-in-expand {
+	0% {
+		letter-spacing: -0.5em;
+		filter: blur(12px);
+		opacity: 0;
+	}
+	100% {
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
+
+
+.slide-in-fwd-center {
+	animation: slide-in-fwd-center 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+}
+@keyframes slide-in-fwd-center {
+	0% {
+		transform: translateZ(-1400px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateZ(0);
+		opacity: 1;
+	}
+}
+
+
+.text-focus-in {
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes text-focus-in {
+	0% {
+		filter: blur(12px);
+		opacity: 0;
+	}
+	100% {
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
+
 /* Reset styles */
 * {
 	padding: 0px;
@@ -249,21 +309,6 @@ ul.outList li:hover {
 	cursor: pointer;	
 }
 
-.text-focus-in {
-	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-@keyframes text-focus-in {
-  0% {
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-
-
 .slider {
 	height: 501px;
 	background-image: url("../img/background/slideBack.png");
@@ -278,10 +323,10 @@ ul.outList li:hover {
 	height: inherit;
 	align-items: center;
 	-webkit-transition: all 2s ease-in;
--moz-transition: all 2s ease-in;
--ms-transition: all 2s ease-in;
--o-transition: all 2s ease-in;
-transition: all 2s ease-in;
+	-moz-transition: all 2s ease-in;
+	-ms-transition: all 2s ease-in;
+	-o-transition: all 2s ease-in;
+	transition: all 2s ease-in;
 }
 
 .sliderContentTextInfo {
@@ -342,6 +387,208 @@ transition: all 2s ease-in;
     padding-bottom: 70px;
     background-color: #fafafa;
 }
+
+.counterWrapper {
+	max-width: 1220px;
+	margin: 0 auto;
+}
+
+.counterContent {
+	display: flex;
+	justify-content: space-between;
+}
+
+.old,
+.pcsPallets,
+.sucsOrder,
+.kindProd {
+    display: flex;
+    flex-flow: column;
+    align-items: center;	
+}
+
+.counterContent .number {
+	color: #737d26;
+    font-size: 55px;
+	font-weight: 800;
+    line-height: 50px;
+    margin-bottom: 12px;
+}
+
+.counterContent .tittle {
+	font-size: 18px;
+    line-height: 23px;
+    color: #1a3a1d;
+	font-weight: 800;
+    letter-spacing: 0px;
+}
+
+.aboutCompany {
+	background-image: url("../img/background/pallets-bg.png");
+	padding-top: 70px;
+    padding-bottom: 70px;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.aboutCompanyWrapper {
+	max-width: 1220px;
+	margin: 0 auto;
+}
+
+.aboutCompanyContent {
+	width: 66.666%;
+	margin: 0 auto;
+}
+
+.aboutCompany .tittle {
+	font-size: 35px;
+    line-height: 39px;
+    font-weight: 700;
+    letter-spacing: 0px;    
+	color: #737d27;	
+	text-align: center;
+	margin-bottom: 35px;
+}
+
+.aboutCompany h2 {
+	display: inline;
+}
+
+.aboutCompany span {
+	text-align: center;
+	color: #575756;
+	font-size: 16px;
+}
+
+.aboutCompany span p {
+	margin: 0 0 15px;
+}
+
+.DetailsButton {
+	text-align: center;
+	margin: 40px;
+}
+
+.DetailsButton span {
+	color: #fff;
+	font-size: 17.6px;
+}
+
+.PresentationCompany {
+	padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url("../img/background/video-block-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: cover;
+}
+
+.PresentationCompanyWrapper {
+	max-width: 1220px;
+	margin: 0 auto;
+}
+
+.PresentationCompanyContainer {
+	display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.PresentationCompanyContainer h2 {
+	color: #fff;
+	font-size: 35px;
+    line-height: 39px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    margin-bottom: 25px;
+}
+
+.PresentationCompanyContainer .desc {
+	color: #fff;
+	font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    letter-spacing: 0px;
+	margin-top: 20px;
+	margin-bottom: 25px;
+}
+
+footer {
+	padding: 60px 0 111px 0;
+	background-image: url("../img/background/pallets-bg-color.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+footer h4 {
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+	color: #ffffff;
+	font-weight: 800;
+    letter-spacing: 0px;
+	margin-bottom: 15px;
+}
+
+.footerContainer li {
+    margin-bottom: 9px;
+}
+
+.footerContainer li a {
+    color: #ccc;
+	padding: 0;
+    margin-bottom: 9px;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.footerWrapper {
+	max-width: 1220px;
+	margin: 0 auto;
+}
+
+.footerContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.Copyright {
+	width: 48%;
+}
+
+.ProductionProducts,
+.Services {
+	width: 26%;
+}
+
+.Copyright p {
+	color: #fff;
+	margin-top: 15px;
+	margin-bottom: 15px;
+    padding-right: 13%;
+}
+
+.Copyright small {
+	color: #e7e9df;
+}
+
+.footerCopy {
+	position: absolute;
+	bottom: 0;
+	color: #fafafa;
+    border: none;
+    background-color: #575756;
+	min-height: 59px;
+	width: 100%;
+}
+
+.footerContainer{
+	max-width: 1220px;
+	margin: 0 auto;
+}
+
 
 
 @media (max-width: 375px) { 
